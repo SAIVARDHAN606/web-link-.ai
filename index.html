@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLink AI - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🩸 LifeLink AI</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="register.html">Become a Donor</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="app-header">
+      <div class="logo-area">
+        <div class="logo-icon">🩸</div>
+        <div class="logo-text">
+          <h1>LifeLink AI <span>intelligent matching</span></h1>
+        </div>
+      </div>
+      <div class="header-badge">
+        ⚕️ <strong>real‑time</strong> · donor pool 20+
+      </div>
+    </header>
+
+    <div class="dashboard-grid" id="demandDashboard"></div>
+
+    <div class="two-columns">
+      <!-- Blood request form -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-icon">📋</div>
+          <h2>Emergency blood request</h2>
+        </div>
+        <form id="requestForm">
+          <div class="form-grid">
+            <div class="field full-width">
+              <label>Blood group needed</label>
+              <select id="bloodGroup" required>
+                <option value="A+">A+</option><option value="A-">A-</option>
+                <option value="B+">B+</option><option value="B-">B-</option>
+                <option value="O+" selected>O+</option><option value="O-">O-</option>
+                <option value="AB+">AB+</option><option value="AB-">AB-</option>
+              </select>
+            </div>
+            <div class="field full-width">
+              <label>Location</label>
+              <input type="text" id="location" value="Downtown">
+            </div>
+            <div class="field">
+              <label>Urgency</label>
+              <select id="urgency">
+                <option value="Normal">🟢 Normal</option>
+                <option value="Urgent" selected>🟡 Urgent</option>
+                <option value="Critical">🔴 Critical</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Units</label>
+              <input type="number" id="units" value="2">
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">
+            <span>🔍 Find compatible donors</span>
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Donor results -->
+      <div class="card">
+        <div class="ai-status">
+          <div class="card-header" style="margin-bottom:0;">
+            <div class="card-header-icon">🫂</div>
+            <h2>Matched donors</h2>
+          </div>
+          <div class="ai-chip" id="aiChip">
+            <span>🤖 AI ready</span>
+            <span class="green-dot" id="statusDot"></span>
+          </div>
+        </div>
+
+        <div id="loadingArea" class="loading-area hidden">
+          <div class="spinner"></div>
+          <p>AI analysing donor pool</p>
+        </div>
+
+        <div id="donorList" class="donor-list"></div>
+
+        <div id="emergencyBanner" class="emergency-sim hidden">
+          <span style="font-size:2rem;">🚨</span>
+          <span><strong>Emergency alert sent</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>LifeLink AI</h3>
+        <p>Connecting donors with those in need.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 LifeLink AI</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
